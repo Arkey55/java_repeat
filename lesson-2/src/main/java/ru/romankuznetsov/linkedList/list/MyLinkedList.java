@@ -2,7 +2,7 @@ package ru.romankuznetsov.linkedList.list;
 
 import ru.romankuznetsov.linkedList.list.iterator.MyIterator;
 
-public class MyLinkedList<T> implements MyList {
+public class MyLinkedList<T> implements MyList<T> {
     private Node currentElem;
     private Node lastElem;
     private int size;
@@ -25,7 +25,7 @@ public class MyLinkedList<T> implements MyList {
     }
 
     @Override
-    public boolean remove(Object val) {
+    public boolean remove(T val) {
 
         if (currentElem.value.equals(val)) {
             Node node = currentElem;
@@ -70,18 +70,18 @@ public class MyLinkedList<T> implements MyList {
     }
 
     @Override
-    public Object get(int index) {
+    public T get(int index) {
 
         Node node = currentElem;
 
         if (index == 0){
-            return node.value;
+            return (T) node.value;
         }
 
         for (int i = 0; i < index; i++) {
             node = node.next;
             if (i == index - 1){
-                return node.value;
+                return (T) node.value;
             }
         }
 
