@@ -2,23 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>java_repeat</artifactId>
+        <groupId>ru.romankuznetsov</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>ru.romankuznetsov</groupId>
-    <artifactId>java_repeat</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <java.version>11</java.version>
     </properties>
 
-    <modules>
-        <module>lesson-1</module>
-        <module>lesson-2</module>
-        <module>lesson-3</module>
-        <module>lesson-4</module>
-        <module>lesson-5</module>
-    </modules>
+    <artifactId>lesson-5</artifactId>
+
 
 </project>
