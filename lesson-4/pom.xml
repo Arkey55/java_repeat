@@ -10,7 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <artifactId>lesson-4</artifactId>
