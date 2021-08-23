@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+        <table>
+            <tr th:each="student: ${students}">
+                <td th:text="${student.id}"></td>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.age}"></td>
+                <td>
+                    <form action="#" th:action="@{'/api/v1/students/delete/{id}'(id=${student.id})}" th:method="delete">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <p><a href="/api/v1/students/addform">add student</a></p>
+        <p><a href="/api/v1/students/updform">update student</a></p>
+    </body>
+</html>
